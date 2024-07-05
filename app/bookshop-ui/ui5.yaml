@@ -1,0 +1,8 @@
+specVersion: "3.1"
+metadata:
+  name: bookshopui
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-appreload
+      afterMiddleware: compression

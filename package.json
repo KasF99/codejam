@@ -1,0 +1,32 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "A simple self-contained bookshop service.",
+  "dependencies": {
+    "@sap/cds": "^7.8.1",
+    "@sap/cds-dk": "^7.8.1",
+    "cds-plugin-ui5": "^0.8.3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.8",
+    "cds-plugin-ui5": "^0.6.13"
+  },
+  "scripts": {
+    "start": "cds run",
+    "dev": "cds watch",
+    "watch-bookshop-ui": "cds watch --open bookshopui/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "cds": {
+    "db": {
+      "kind": "sql"
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/bookshop-ui"
+  ]
+}
